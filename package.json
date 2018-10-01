@@ -1,0 +1,18 @@
+{
+  "name": "shaw-api",
+  "version": "1.0.0",
+  "description": "An API for the shaw challenge.",
+  "main": "sever.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Leonardo Kalyn",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
