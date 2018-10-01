@@ -6,7 +6,7 @@ var express = require('express'),
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var routes = require('./api/routes/shawRoutes');
+var routes = require('./api/routes/apiRoutes');
 routes(app);
 app.use((req, res) => {
   res.status(404).send({url: req.originalUrl + ' not found'})
