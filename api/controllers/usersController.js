@@ -10,7 +10,7 @@ exports.getUsers = (req, res) => {
 };
 
 exports.getUser = (req, res) => {
-  got(`${baseUrl}/users/${req.username}`, { json: true }).then(response => {
+  got(`${baseUrl}/users/${req.params.username}`, { json: true }).then(response => {
     res.json(response.body);
   }).catch(error => {
     res.send( error.message ? error.message : error );
@@ -18,7 +18,7 @@ exports.getUser = (req, res) => {
 };
 
 exports.getRepos = (req, res) => {
-  got(`${baseUrl}/users/${req.username}/repos`, { json: true }).then(response => {
+  got(`${baseUrl}/users/${req.params.username}/repos`, { json: true }).then(response => {
     res.json(response.body);
   }).catch(error => {
     res.send( error.message ? error.message : error );
